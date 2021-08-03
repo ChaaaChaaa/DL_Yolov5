@@ -8,6 +8,7 @@ python yolov5/detect.py --source datasets/coco128/images/val2017/IMG_2395_jpeg_j
     img에다가 train/val이미지명 넣이서 변경해서 보기
     python yolov5/detect.py --source datasets/coco128/images/val2017/IMG_2395_jpeg_jpg.rf.9f1503ad3b7a7c7938daed057cc4e9bc.jpg --weights best.pt --img 640
 
+data/images/train2017/valid
 """
 
 import argparse
@@ -31,9 +32,9 @@ from utils.torch_utils import select_device, load_classifier, time_sync
 
 
 @torch.no_grad()
-def run(weights='yolov5s.pt',  # model.pt path(s),
-        source='data/images',  # file/dir/URL/glob, 0 for webcam
-        imgsz=640,  # inference size (pixels)
+def run(weights='yolov5l.pt',  # model.pt path(s), yolov5s ->best -> ''로 변경 , 안되면 best로 변경하기
+        source='data/images/valid/images',  # file/dir/URL/glob, 0 for webcam data/images/ -> data/images/train2017/train로 변경
+        imgsz=640,  # inference size (pixels) #320으로 변경
         conf_thres=0.25,  # confidence threshold
         iou_thres=0.45,  # NMS IOU threshold
         max_det=1000,  # maximum detections per image
@@ -195,8 +196,8 @@ def run(weights='yolov5s.pt',  # model.pt path(s),
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', nargs='+', type=str, default='yolov5s.pt', help='model.pt path(s)')
-    parser.add_argument('--source', type=str, default='data/images', help='file/dir/URL/glob, 0 for webcam')
+    parser.add_argument('--weights', nargs='+', type=str, default='yolov5l.pt', help='model.pt path(s)') #yolov5s -> best-> ''변경
+    parser.add_argument('--source', type=str, default='data/images/valid/images', help='file/dir/URL/glob, 0 for webcam') #data/images -> data/images/train2017/valid
     parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=640, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.25, help='confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.45, help='NMS IoU threshold')
