@@ -38,6 +38,7 @@ Epoch   gpu_mem       box       obj       cls    labels  img_size
                  dog        736        487      0.955      0.948       0.98      0.634
 
 
+![image](https://user-images.githubusercontent.com/56629324/231931072-2bd2f0f8-6541-47a7-95d9-e357813d76b1.png)
 
 
 
@@ -50,8 +51,7 @@ Epoch   gpu_mem       box       obj       cls    labels  img_size
                  all        736        738       0.88      0.863      0.907      0.473
                  cat        736        251      0.899      0.916      0.942      0.561
                  dog        736        487       0.86      0.809      0.872      0.385
-
-![image](https://user-images.githubusercontent.com/56629324/231930780-a0a4b785-d8c6-48bf-a0a8-cd651f760283.png)
+![image](https://user-images.githubusercontent.com/56629324/231931098-0f5c048b-ed19-4b46-9554-8a0727552e29.png)
 
 
 
@@ -68,7 +68,8 @@ Epoch   gpu_mem       box       obj       cls    labels  img_size
                  dog        736        487      0.981      0.957      0.986      0.684
 
 
- 
+ ![image](https://user-images.githubusercontent.com/56629324/231931022-9a71ed39-e109-45c4-8f2f-ec9ce24e3292.png)
+
 
 
 ## 6차 시도 :  epoch:300 image size:320 batch size: 8 (최종)
